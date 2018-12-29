@@ -1,2 +1,2 @@
 # MovieSearch
-Search an Movie or TV shows and also view details about the movie.
+Search any Movie or a TV Series and also you can view details of that movie / TV Series.
