@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Use this powerful search option to get information on any Movies or TV Shows using their titles or the IMDB Id" name="description">
+    <title>Search Movie List and Details</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500|Encode+Sans+Condensed:500" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/index.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Movie Database</h1>
+        <div class="search-container" id="searchContainer">
+            <form role="search">
+                <div class="movie-search" id="movieSearchField">
+                    <label for="searchMovie"></label> 
+                    <input aria-label="Search for any movie using the title" class="search-field" id="searchMovie" name="searchMovie" placeholder="Search movie / tv show title" type="text">
+                    <div class="error-message">
+                        Please enter a movie or a tv show name
+                    </div><button class="search-button" id="searchButton">Find</button>
+                </div>
+            </form>
+        </div>
+        <div class="list-container" id="movieContainer"></div>
+        <div class="load-more">
+            <a class="load-more-link hide" href="#" id="loadMore">View more movies</a>
+        </div>
+    </div>
+</body>
+</html>

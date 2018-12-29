@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.header {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    font-size: 48px;
+}
+
+.search-container.top {
+    margin: 40px 5px;
+}
+
+.search-container {
+    margin: 20% 5px;
+    text-align: center;
+}
+
+.search-field {
+    width: 35%;
+    border: 1px solid #e3e3e3;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 10px 0 20px;
+    display: none;
+}
+
+.error .error-message {
+    display: block;
+}
+
+.error .search-field {
+    border: 1px solid #ff0000;
+    box-sizing: border-box;
+}
+
+.search-button {
+    cursor: pointer;
+    padding: 5px 20px;
+    width: 15%;
+    height: 40px;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 2px;
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 24.2%;
+    cursor: pointer;
+    border: 1px solid #e3e3e3;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 0.38%;
+    border-radius: 5px;
+    position: relative;
+    transition: width .1s ease-out;
+}
+
+.movie-poster-container {
+    width: 70%;
+    margin: 25px auto;
+    height: 30vh;
+}
+
+.movie-details-container {
+    margin: 20px;
+}
+
+.movie-details {
+    margin: 20px;
+    display: none;
+    height: inherit;
+}
+
+.no-result-error {
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+    color: #666666;
+}
+
+.expand {
+    width: 49.27%;
+    display: flex;
+}
+
+.expand .movie-poster-container {
+    margin: 25px;
+    flex-grow: 1;
+}
+
+.expand .movie-details-container {
+    display: none;
+}
+
+.expand .movie-details * {
+    font-family: "Encode Sans Condensed", sans-serif;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.movie-details .movie-title {
+    display: block;
+    font-size: 36px;
+}
+
+.expand .movie-details {
+    display: block;
+    flex-grow: 4
+}
+
+.movie-poster {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: none;
+}
+
+.noImage {
+    height: 100%;
+    width: 100%;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    padding-top: 10vh;
+    color: #e3e3e3;
+}
+
+.movie-title {
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+
+.movie-type {
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.load-more {
+    text-align: center;
+    margin: 40px 0 60px;
+}
+
+.load-more-link {
+    font-family: "Encode Sans Condensed", sans-serif;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.load-more-link:hover {
+    text-decoration: underline;
+}
+
+.load-more-link::after {
+    content: ">";
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media only screen and (max-width: 576px) {
+    .movie,
+    .search-field,
+    .search-button,
+    .expand {
+        width: 100%;
+    }
+    .movie {
+        max-height: 100%;
+        margin: 0 auto 20px;
+    }
+    .search-field,
+    .search-button {
+        margin: 5px auto;
+    }
+    .movie-poster-container {
+        height: 290px;
+    }
+    .movie-poster {
+        width: auto;
+        max-height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .search-field,
+    .search-button {
+        width: 100%;
+        margin: 5px auto;
+    }
+    .movie {
+        width: 49.2%;
+    }
+    .movie-poster-container {
+        height: 260px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .movie,
+    .search-field,
+    .search-button {
+        width: 32.5%;
+    }
+    .movie-poster-container {
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .expand {
+        display: block;
+    }
+    .expand .movie-poster-container {
+        width: auto;
+    }
+    .expand .movie-details-container {
+        width: auto;
+        padding: 0;
+    }
+    .expand .movie-title {
+        font-size: 18px;
+    }
+    .expand .movie-type {
+        display: none;
+    }
+}
