@@ -4,22 +4,36 @@
 }
 
 .container {
+    font-family: "Quicksand", sans-serif;
     width: 80%;
     margin: 40px auto;
+    color: white;
+}
+
+.page-background {
+    background-color: #141414;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
 .header {
     font-family: 'Saira Extra Condensed', sans-serif;
     text-align: center;
-    font-size: 48px;
+    font-size: 4.8rem;
+    padding-bottom: 10px;
 }
 
 .search-container.top {
-    margin: 40px 5px;
+    margin: 40px auto;
+    top: 0;
 }
 
 .search-container {
-    margin: 20% 5px;
+    position: relative;
+    top: 200px; 
     text-align: center;
 }
 
@@ -63,7 +77,6 @@
 }
 
 .list-container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -97,7 +110,6 @@
 }
 
 .no-result-error {
-    font-family: "Encode Sans Condensed", sans-serif;
     font-weight: 600;
     font-size: 42px;
     text-align: center;
@@ -122,10 +134,17 @@
 }
 
 .expand .movie-details * {
-    font-family: "Encode Sans Condensed", sans-serif;
     margin-bottom: 20px;
     font-weight: 300;
     font-size: 14px;
+}
+
+.expand .movie-plot {
+    font-size: 16px;
+}
+
+.expand .movie-details strong {
+    font-weight: 600;
 }
 
 .movie-details .movie-title {
@@ -157,14 +176,12 @@
 }
 
 .movie-title {
-    font-family: "Encode Sans Condensed", sans-serif;
     font-weight: 600;
     font-size: 18px;
     text-align: center;
 }
 
 .movie-type {
-    font-family: "Encode Sans Condensed", sans-serif;
     font-weight: 300;
     font-size: 14px;
     text-align: center;
@@ -177,7 +194,6 @@
 }
 
 .load-more-link {
-    font-family: "Encode Sans Condensed", sans-serif;
     text-decoration: none;
     color: #007bff;
 }
@@ -207,6 +223,9 @@
     .expand {
         width: 100%;
     }
+    .header {
+        font-size: 2.8rem;
+    }
     .movie {
         max-height: 100%;
         margin: 0 auto 20px;
@@ -226,11 +245,20 @@
     }
 }
 
+@media only screen and (max-height: 667px) {
+    .search-container {
+        top: 100px;
+    }
+}
+
 @media only screen and (min-width: 577px) and (max-width: 767px) {
     .search-field,
     .search-button {
         width: 100%;
         margin: 5px auto;
+    }
+    .header {
+        font-size: 3.8rem;
     }
     .movie {
         width: 49.2%;

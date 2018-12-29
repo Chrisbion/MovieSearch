@@ -161,10 +161,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                             </span>&nbsp
                                             <span>${data.Language}</span>
                                         </div>
-                                        <p>Genre : ${data.Genre}</p>
-                                        <p>${data.Plot}</p>
-                                        <p>Director : ${data.Director}</p>
-                                        <p>Actors: ${data.Actors}</p>`;
+                                        <p class="movie-plot">${data.Plot}</p>
+                                        <p><strong>Director : </strong>${data.Director}</p>
+                                        <p><strong>Genre : </strong>${data.Genre}</p>
+                                        <p><strong>Starring : </strong>${data.Actors}</p>`;
                     if (request.status >= 200 && request.status < 400) {
                         tile.querySelector('.movie-details').innerHTML = movieDetails;
                     }
