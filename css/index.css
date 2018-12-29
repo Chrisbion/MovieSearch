@@ -114,6 +114,7 @@
 .expand .movie-poster-container {
     margin: 25px;
     flex-grow: 1;
+    max-width: 30%;
 }
 
 .expand .movie-details-container {
@@ -255,7 +256,8 @@
         display: block;
     }
     .expand .movie-poster-container {
-        width: auto;
+        margin: 25px auto;
+        max-width: 100%;
     }
     .expand .movie-details-container {
         width: auto;
