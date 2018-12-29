@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         return;
                     }
                     const errorMessage = document.createElement("p");
-                    errorMessage.textContent = `No Results found, try another title`;
+                    errorMessage.textContent = `No Results found, please try another title`;
                     errorMessage.setAttribute('class', 'no-result-error');
                     movieContainer.textContent = "";
                     movieContainer.appendChild(errorMessage, movieContainer.childNodes[0]);
@@ -148,10 +148,17 @@ document.addEventListener("DOMContentLoaded", function() {
                                         <div>
                                             <span>${data.Year}</span>&nbsp
                                             <span>${
-                                              data.Rated == "N/A" ? "NOT RATED"
+                                              data.Rated === "N/A" ? "NOT RATED"
                                                 : data.Rated
                                             }</span>&nbsp
-                                            <span>${data.Runtime}</span>&nbsp
+                                            <span> ${
+                                                data.Type === "series" ? 
+                                                    data.totalSeasons > 1 ? 
+                                                        data.totalSeasons+' Seasons'
+                                                        : data.totalSeasons+' Season'
+                                                : data.Runtime
+                                            }
+                                            </span>&nbsp
                                             <span>${data.Language}</span>
                                         </div>
                                         <p>Genre : ${data.Genre}</p>
