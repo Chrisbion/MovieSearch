@@ -37,6 +37,12 @@
     text-align: center;
 }
 
+.search-type {
+    height: 50px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
 .search-field {
     width: 35%;
     border: 1px solid #e3e3e3;
@@ -126,7 +132,7 @@
 .expand .movie-poster-container {
     margin: 25px;
     flex-grow: 1;
-    max-width: 30%;
+    width: 100%;
 }
 
 .expand .movie-details-container {
@@ -285,7 +291,6 @@
     }
     .expand .movie-poster-container {
         margin: 25px auto;
-        max-width: 100%;
     }
     .expand .movie-details-container {
         width: auto;

@@ -17,6 +17,11 @@
             <h1 class="header">Movie Search</h1>
             <form role="search">
                 <div class="movie-search" id="movieSearchField">
+                    <select class="search-type" id = "searchType">
+                        <option value="all">All</option>
+                        <option value="movie">Movies</option>
+                        <option value="series">TV Series</option>
+                    </select>
                     <label for="searchMovie"></label> 
                     <input aria-label="Search for any movie using the title" class="search-field" id="searchMovie" name="searchMovie" placeholder="Search movie / tv show title" type="text">
                     <div class="error-message">
@@ -27,7 +32,7 @@
         </div>
         <div class="list-container" id="movieContainer"></div>
         <div class="load-more">
-            <a class="load-more-link hide" href="#" id="loadMore">View more movies</a>
+            <a class="load-more-link hide" href="#" id="loadMore">View more results</a>
         </div>
     </div>
 </body>
