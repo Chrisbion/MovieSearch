@@ -97,7 +97,6 @@
     margin: 0.38%;
     border-radius: 5px;
     position: relative;
-    transition: width .1s ease-out;
 }
 
 .movie-poster-container {
